@@ -4,11 +4,19 @@ public class BankAccount {
     int accountID;
     double balance;
 
+    //Constructors
+    BankAccount(){
+        firstName = "";
+        lastName = "";
+        accountID = 0;
+        balance = 0;
+    }
+
     BankAccount(String firstName, String lastName, int accountID){
         this.firstName = firstName;
         this.lastName = lastName;
         this.accountID = accountID;
-        balance = 0;
+        this.balance = 0;
     }
 
     //Deposit and withdrawal
@@ -52,6 +60,7 @@ public class BankAccount {
 
     //Account Summary
     public void accountSummary(){
+        System.out.println();
         System.out.println("Name: " + this.firstName + " " + this.lastName);
         System.out.println("Account ID: " + this.accountID);
         System.out.println(String.format("Balance: $%.2f", this.balance));
